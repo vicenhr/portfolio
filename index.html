@@ -1,11 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Vicente Hernández Ramos</title>
+    <title>Portafolio | VC</title>
+    <!-- Importando tus fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Tu paleta de colores y variables */
+        :root {
+            --dark-green: #1B4332;
+            --black-text: #1A1A1A;
+            --off-white: #FAFAF8;
+            --taupe: #8C8578;
+        }
+
+        /* Estilos base minimalistas */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--off-white);
+            color: var(--black-text);
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-green);
+        }
+        
+        /* Navegación */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: var(--off-white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--taupe);
+        }
+        nav img {
+            height: 50px;
+            border-radius: 8px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--black-text);
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--dark-green);
+        }
+
+        /* Secciones Generales */
+        section {
+            padding: 5rem 5%;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* 1. Landing (Arrival) */
+        #landing {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            background-image: url('Gemini_Generated_Image_5vbo5h5vbo5h5vbo.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .intro-text {
+            max-width: 50%;
+        }
+        .intro-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .intro-text p {
+            font-size: 1.2rem;
+            color: var(--taupe);
+        }
+        .profile-img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 10px 10px 0px var(--dark-green);
+        }
+
+        /* 2. The Project (Trust) */
+        #project {
+            background-color: #fff;
+            text-align: center;
+        }
+        #project h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        .grid-evidence {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .evidence-card {
+            padding: 2rem;
+            border: 1px solid var(--taupe);
+            border-radius: 8px;
+            background-color: var(--off-white);
+        }
+        .evidence-card img {
+            width: 80px;
+            margin-bottom: 1rem;
+        }
+
+        /* 3. Contact (Action) */
+        #contact {
+            text-align: center;
+            background-image: url('Gemini_Generated_Image_rnzu4crnzu4crnzu.png');
+            background-size: cover;
+            background-position: center;
+        }
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .contact-btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2.5rem;
+            background-color: var(--dark-green);
+            color: var(--off-white);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .contact-btn:hover {
+            background-color: var(--black-text);
+        }
+    </style>
 </head>
 <body>
-    <h1>Vicente Hernandez Ramos</h1>
+
+    <!-- Menú de Navegación -->
+    <nav>
+        <a href="#landing">
+            <img src="android-chrome-512x512.png" alt="VC Logo">
+        </a>
+        <ul>
+            <li><a href="#landing">Inicio</a></li>
+            <li><a href="#project">El Proyecto</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- 1. Landing: Proof Statement -->
+    <section id="landing">
+        <div class="intro-text">
+            <h1>Hola, soy [Tu Nombre].</h1>
+            <p>Construyo soluciones modulares que escalan. Este es mi espacio para mostrar cómo la tecnología y el diseño formal se encuentran.</p>
+        </div>
+        <img src="yonuevo.jpeg" alt="Foto de perfil" class="profile-img">
+    </section>
+
+    <!-- 2. The Project: Modularity Evidence -->
+    <section id="project">
+        <h2>Evidencia de Modularidad</h2>
+        <div class="grid-evidence">
+            <div class="evidence-card">
+                <img src="Gemini_Generated_Image_z8bmlz8bmlz8bmlz.png" alt="Terminal Icon">
+                <h3>Desarrollo Lógico</h3>
+                <p>Estructuras de código limpias y fáciles de mantener.</p>
+            </div>
+            <div class="evidence-card">
+                <img src="Gemini_Generated_Image_cn9vgucn9vgucn9v.png" alt="Network Icon">
+                <h3>Integración de Redes</h3>
+                <p>Conectando nodos y sistemas de manera eficiente.</p>
+            </div>
+            <div class="evidence-card">
+                <img src="Gemini_Generated_Image_df7we7df7we7df7w.png" alt="Server Icon">
+                <h3>Arquitectura de Servidores</h3>
+                <p>Bases sólidas para el despliegue de aplicaciones.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Contact: Action -->
+    <section id="contact">
+        <h2>¿Listo para colaborar?</h2>
+        <p>Hablemos sobre tu próximo gran proyecto.</p>
+        <a href="mailto:tu-email@ejemplo.com" class="contact-btn">Envíame un correo</a>
+    </section>
+
 </body>
 </html>
