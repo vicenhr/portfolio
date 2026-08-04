@@ -1,13 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Vicente Hernández Ramos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Vicente Hernández Ramos</title>
+<meta name="description" content="VentiFlow, ForoHub y LiterAlura: sistemas backend en Java y Spring Boot construidos por Vicente Hernández Ramos.">
+<link rel="icon" type="image/png" href="assets/android-chrome-512x512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <h1>Projects</h1>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/android-chrome-512x512.png" alt="Logo VC">
+      <span>Vicente Hernández Ramos</span>
+    </a>
+    <ul>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="projects.html" class="nav-link is-active">Projects</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header style="padding: 4.5rem 0 1rem;">
+  <div class="wrap">
+    <p class="eyebrow">Modularity evidence</p>
+    <h1 style="font-size: clamp(2rem, 3.4vw, 2.8rem); margin-top: 0.6rem; max-width: 22ch;">Three systems built, understood, and ready to defend line by line.</h1>
+  </div>
+</header>
+
+<!-- VENTIFLOW — lead -->
+<section class="project-case" id="ventiflow">
+  <div class="wrap">
+    <div class="case-grid">
+      <div class="case-visual">
+        <img src="assets/server-icon.png" alt="Diagrama de servidor y red representando la arquitectura de VentiFlow">
+      </div>
+      <div>
+        <span class="case-index">01 · Lead project</span>
+        <div class="case-title">
+          <h3>VentiFlow</h3>
+          <span class="lead-badge">Strongest case</span>
+        </div>
+        <p class="case-summary">Real-Time Order Management System</p>
+        <p class="case-desc">A platform that centralizes cafeteria operations by connecting point-of-sale systems with kitchen and bar displays in real time — so an order taken at the counter appears on the kitchen screen the instant it's placed.</p>
+        <ul class="case-list">
+          <li>Engineered a RESTful API to manage order processing, role-based authentication, and a customer loyalty program.</li>
+          <li>Implemented real-time bidirectional communication with Spring WebSocket + STOMP to sync Kitchen Display Systems (KDS) and customer screens instantly.</li>
+          <li>Automated database migrations with Flyway and structured persistence with Spring Data JPA + PostgreSQL.</li>
+        </ul>
+        <div class="stack-chips">
+          <span>Java</span><span>Spring Boot</span><span>PostgreSQL</span><span>WebSockets</span><span>Flyway</span>
+        </div>
+        <div class="case-ctas">
+          <a href="https://github.com/vicenhr/ventiflow" target="_blank" rel="noopener" class="btn btn-primary btn-arrow">View repository</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOROHUB -->
+<section class="project-case" id="forohub">
+  <div class="wrap">
+    <div class="case-grid">
+      <div class="case-visual">
+        <img src="assets/hexagon-network.png" alt="Diagrama de nodos conectados representando la estructura de ForoHub">
+      </div>
+      <div>
+        <span class="case-index">02</span>
+        <div class="case-title"><h3>ForoHub</h3></div>
+        <p class="case-summary">Discussion Forum API</p>
+        <p class="case-desc">A secure REST API for managing forum topics, with authentication and database persistence handled end to end.</p>
+        <ul class="case-list">
+          <li>Implemented JWT-based authentication for secure user access control.</li>
+          <li>Designed and built full CRUD operations backed by a MySQL relational database.</li>
+          <li>Documented and tested endpoints with Swagger/OpenAPI for clear integration.</li>
+        </ul>
+        <div class="stack-chips">
+          <span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>JPA</span><span>MySQL</span>
+        </div>
+        <div class="case-ctas">
+          <a href="https://github.com/vicenhr/forohub" target="_blank" rel="noopener" class="btn btn-primary btn-arrow">View repository</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LITERALURA -->
+<section class="project-case" id="literalura">
+  <div class="wrap">
+    <div class="case-grid">
+      <div class="case-visual">
+        <img src="assets/command-line.png" alt="Icono de puerta y flecha representando el acceso a datos externos en LiterAlura">
+      </div>
+      <div>
+        <span class="case-index">03</span>
+        <div class="case-title"><h3>LiterAlura</h3></div>
+        <p class="case-summary">Interactive Literary Manager</p>
+        <p class="case-desc">A console application that manages a literary database by consuming the Gutendex API — turning an open book catalog into a queryable local dataset.</p>
+        <ul class="case-list">
+          <li>Built a persistence layer with Spring Data JPA, preventing duplicate book and author records.</li>
+          <li>Used Java Streams and JPQL for advanced filtering — author longevity, real-time download stats.</li>
+          <li>Integrated an external REST API with Jackson for JSON-to-relational-database mapping.</li>
+        </ul>
+        <div class="stack-chips">
+          <span>Java</span><span>Spring Boot</span><span>PostgreSQL</span><span>REST API</span>
+        </div>
+        <div class="case-ctas">
+          <a href="https://github.com/vicenhr/literalura" target="_blank" rel="noopener" class="btn btn-primary btn-arrow">View repository</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="extra-note">
+      <h4>Also built: Currency Converter</h4>
+      <p>A console/desktop app for real-time currency conversion, integrating an external REST API and handling JSON serialization with Gson and Jackson. <a href="https://github.com/vicenhr/currency-converter" target="_blank" rel="noopener">View repository →</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Want the full walkthrough?</h2>
+    <p>I'm happy to go through the architecture, the trade-offs, or the code itself.</p>
+    <a href="contact.html" class="btn btn-primary btn-arrow">Message me</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="divider"></div>
+    <p>Vicente Hernández Ramos — Backend AI Engineer · Intern</p>
+  </div>
+</footer>
+
 </body>
 </html>

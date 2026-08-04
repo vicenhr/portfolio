@@ -1,210 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio | VC</title>
-    <!-- Importando tus fuentes -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Tu paleta de colores y variables */
-        :root {
-            --dark-green: #1B4332;
-            --black-text: #1A1A1A;
-            --off-white: #FAFAF8;
-            --taupe: #8C8578;
-        }
-
-        /* Estilos base minimalistas */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: var(--off-white);
-            color: var(--black-text);
-            line-height: 1.6;
-        }
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--dark-green);
-        }
-        
-        /* Navegación */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 5%;
-            background-color: var(--off-white);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid var(--taupe);
-        }
-        nav img {
-            height: 50px;
-            border-radius: 8px;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-        nav a {
-            text-decoration: none;
-            color: var(--black-text);
-            font-weight: 700;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: var(--dark-green);
-        }
-
-        /* Secciones Generales */
-        section {
-            padding: 5rem 5%;
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        /* 1. Landing (Arrival) */
-        #landing {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
-            background-image: url('Gemini_Generated_Image_5vbo5h5vbo5h5vbo.png');
-            background-size: cover;
-            background-position: center;
-        }
-        .intro-text {
-            max-width: 50%;
-        }
-        .intro-text h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
-        .intro-text p {
-            font-size: 1.2rem;
-            color: var(--taupe);
-        }
-        .profile-img {
-            width: 300px;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 10px 10px 0px var(--dark-green);
-        }
-
-        /* 2. The Project (Trust) */
-        #project {
-            background-color: #fff;
-            text-align: center;
-        }
-        #project h2 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-        .grid-evidence {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-        .evidence-card {
-            padding: 2rem;
-            border: 1px solid var(--taupe);
-            border-radius: 8px;
-            background-color: var(--off-white);
-        }
-        .evidence-card img {
-            width: 80px;
-            margin-bottom: 1rem;
-        }
-
-        /* 3. Contact (Action) */
-        #contact {
-            text-align: center;
-            background-image: url('Gemini_Generated_Image_rnzu4crnzu4crnzu.png');
-            background-size: cover;
-            background-position: center;
-        }
-        #contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .contact-btn {
-            display: inline-block;
-            margin-top: 2rem;
-            padding: 1rem 2.5rem;
-            background-color: var(--dark-green);
-            color: var(--off-white);
-            text-decoration: none;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            border-radius: 4px;
-            transition: background 0.3s;
-        }
-        .contact-btn:hover {
-            background-color: var(--black-text);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vicente Hernández Ramos — Backend AI Engineer</title>
+<meta name="description" content="Portfolio de Vicente Hernández Ramos, Backend AI Engineer intern. Sistemas backend en Java y Spring Boot que puedo explicar línea por línea.">
+<link rel="icon" type="image/png" href="assets/android-chrome-512x512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
-    <!-- Menú de Navegación -->
-    <nav>
-        <a href="#landing">
-            <img src="android-chrome-512x512.png" alt="VC Logo">
-        </a>
-        <ul>
-            <li><a href="#landing">Inicio</a></li>
-            <li><a href="#project">El Proyecto</a></li>
-            <li><a href="#contact">Contacto</a></li>
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/android-chrome-512x512.png" alt="Logo VC">
+      <span>Vicente Hernández Ramos</span>
+    </a>
+    <ul>
+      <li><a href="index.html" class="nav-link is-active">Home</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO — Proof statement -->
+<header class="hero">
+  <img src="assets/hero-lines.png" alt="" class="hero-bg" aria-hidden="true">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Backend AI Engineer · Intern</p>
+      <h1 class="hero-claim">It doesn't just work: I understand every line, I can stand by it, and I can explain how.</h1>
+      <p class="hero-role">I build backend systems in Java and Spring Boot — real-time platforms, secure APIs, data pipelines — and I can walk through every decision behind them, not just the result.</p>
+      <div class="hero-ctas">
+        <a href="contact.html" class="btn btn-primary btn-arrow">Contact me</a>
+        <a href="projects.html" class="btn btn-ghost">View projects</a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <img src="assets/profile.jpeg" alt="Foto de Vicente Hernández Ramos" class="hero-photo">
+      <span class="hero-photo-tag">Orizaba, MX</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap"><div class="divider"></div></div>
+
+<!-- WHO I AM -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-block">
+      <p class="eyebrow">Who I am</p>
+      <div>
+        <p>I'm Vicente, a backend engineer intern working mainly in Java and Spring Boot. I like systems that connect real-world workflows — a kitchen, a forum, a catalog — to reliable, well-structured code underneath.</p>
+        <p>Every project on this site is one I can open, run, and explain end to end: the schema, the auth flow, the edge cases. No mystery code.</p>
+        <ul class="stack-list">
+          <li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>PostgreSQL</li>
+          <li>MySQL</li><li>WebSockets · STOMP</li><li>JPA / Hibernate</li><li>REST APIs</li>
         </ul>
-    </nav>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- 1. Landing: Proof Statement -->
-    <section id="landing">
-        <div class="intro-text">
-            <h1>Hola, soy [Tu Nombre].</h1>
-            <p>Construyo soluciones modulares que escalan. Este es mi espacio para mostrar cómo la tecnología y el diseño formal se encuentran.</p>
-        </div>
-        <img src="yonuevo.jpeg" alt="Foto de perfil" class="profile-img">
-    </section>
+<div class="wrap"><div class="divider"></div></div>
 
-    <!-- 2. The Project: Modularity Evidence -->
-    <section id="project">
-        <h2>Evidencia de Modularidad</h2>
-        <div class="grid-evidence">
-            <div class="evidence-card">
-                <img src="Gemini_Generated_Image_z8bmlz8bmlz8bmlz.png" alt="Terminal Icon">
-                <h3>Desarrollo Lógico</h3>
-                <p>Estructuras de código limpias y fáciles de mantener.</p>
-            </div>
-            <div class="evidence-card">
-                <img src="Gemini_Generated_Image_cn9vgucn9vgucn9v.png" alt="Network Icon">
-                <h3>Integración de Redes</h3>
-                <p>Conectando nodos y sistemas de manera eficiente.</p>
-            </div>
-            <div class="evidence-card">
-                <img src="Gemini_Generated_Image_df7we7df7we7df7w.png" alt="Server Icon">
-                <h3>Arquitectura de Servidores</h3>
-                <p>Bases sólidas para el despliegue de aplicaciones.</p>
-            </div>
-        </div>
-    </section>
+<!-- PROJECTS PREVIEW -->
+<section id="projects-preview">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Selected work</p>
+      <h2>Three systems, three problems</h2>
+      <p>Each case below is a real, running project — not a mockup.</p>
+    </div>
+    <div class="preview-grid">
+      <a href="projects.html#ventiflow" class="preview-card">
+        <span class="tag lead">Lead project</span>
+        <h3>VentiFlow</h3>
+        <p>Real-time order management connecting POS with kitchen displays.</p>
+        <div class="chips"><span>Java</span><span>·</span><span>Spring Boot</span><span>·</span><span>WebSockets</span></div>
+      </a>
+      <a href="projects.html#forohub" class="preview-card">
+        <span class="tag">Case</span>
+        <h3>ForoHub</h3>
+        <p>Secure discussion forum API with JWT auth and full CRUD.</p>
+        <div class="chips"><span>Spring Security</span><span>·</span><span>MySQL</span></div>
+      </a>
+      <a href="projects.html#literalura" class="preview-card">
+        <span class="tag">Case</span>
+        <h3>LiterAlura</h3>
+        <p>Literary catalog console app consuming an external books API.</p>
+        <div class="chips"><span>PostgreSQL</span><span>·</span><span>REST</span></div>
+      </a>
+    </div>
+  </div>
+</section>
 
-    <!-- 3. Contact: Action -->
-    <section id="contact">
-        <h2>¿Listo para colaborar?</h2>
-        <p>Hablemos sobre tu próximo gran proyecto.</p>
-        <a href="mailto:tu-email@ejemplo.com" class="contact-btn">Envíame un correo</a>
-    </section>
+<!-- CTA -->
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Ready to talk?</h2>
+    <p>I'm looking for my next backend team. Let's talk about where I'd fit.</p>
+    <a href="contact.html" class="btn btn-primary btn-arrow">Contact me</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="divider"></div>
+    <p>Vicente Hernández Ramos — Backend AI Engineer · Intern</p>
+  </div>
+</footer>
 
 </body>
 </html>
