@@ -76,6 +76,11 @@ a:focus-visible, button:focus-visible {
   padding-top: 1.1rem;
   padding-bottom: 1.1rem;
 }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
 .brand {
   display: flex;
   align-items: center;
@@ -143,6 +148,11 @@ a:focus-visible, button:focus-visible {
 }
 .btn:hover .btn-arrow::after,
 .btn.btn-arrow:hover::after { transform: translateX(3px); }
+.btn-sm {
+  padding: 0.5rem 1.15rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.03em;
+}
 
 /* ---------- Sections ---------- */
 section { padding: 6.5rem 0; }
@@ -359,6 +369,10 @@ section { padding: 6.5rem 0; }
   gap: 1.4rem;
   margin-top: 3rem;
 }
+.channel-grid-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 720px) {
+  .channel-grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
 .channel-card {
   background: #fff;
   border: 1px solid rgba(140,133,120,0.35);
@@ -376,6 +390,45 @@ section { padding: 6.5rem 0; }
 }
 .channel-card h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
 .channel-card p { font-size: 0.88rem; color: var(--taupe); word-break: break-word; }
+
+/* ---------- Blog (empty state) ---------- */
+.blog-empty {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 4.5rem;
+  border: 1px dashed rgba(140,133,120,0.5);
+}
+.blog-empty .glyph-lg {
+  width: 56px; height: 56px; margin: 0 auto 1.6rem;
+  border: 1.5px solid var(--green); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--green); font-family: 'Playfair Display', serif; font-size: 1.6rem;
+}
+.blog-empty h2 { font-size: 1.7rem; }
+.blog-empty p { color: var(--taupe); margin-top: 0.8rem; }
+.coming-list {
+  list-style: none;
+  margin-top: 2.2rem;
+  text-align: left;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.coming-list li {
+  position: relative;
+  padding-left: 1.3rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+.coming-list li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.55rem;
+  width: 7px; height: 7px;
+  background: var(--taupe);
+  border-radius: 50%;
+}
 
 /* ---------- Footer ---------- */
 footer {
