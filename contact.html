@@ -85,26 +85,22 @@
     </div>
   </section>
 
-  <section style="padding: 3rem 0;">
-    <div class="wrap" style="max-width: 480px;">
-      <h2 style="text-align:center; margin-bottom: 0.5rem;">Or leave a quick message</h2>
-      <p style="text-align:center; margin-bottom: 1.5rem;">No calendar, no email client — just type and send.</p>
+    <section style="padding: 3rem 0;">
+    <div class="wrap contact-form-wrap">
+      <h2>Or leave a quick message</h2>
+      <p>No calendar, no email client — just type and send.</p>
 
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
-        style="display:flex; flex-direction:column; gap: 0.8rem;">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
         <input type="hidden" name="form-name" value="contact" />
         <p style="display:none;">
           <label>No llenes esto: <input name="bot-field" /></label>
         </p>
 
-        <input type="text" name="name" placeholder="Your name" required
-          style="padding: 0.7rem 1rem; border-radius: 6px; border: 1px solid var(--paper); background: transparent; color: var(--paper);" />
-        <input type="email" name="email" placeholder="Your email" required
-          style="padding: 0.7rem 1rem; border-radius: 6px; border: 1px solid var(--paper); background: transparent; color: var(--paper);" />
-        <textarea name="message" placeholder="Your message" rows="4" required
-          style="padding: 0.7rem 1rem; border-radius: 6px; border: 1px solid var(--paper); background: transparent; color: var(--paper);"></textarea>
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" placeholder="Your message" rows="4" required></textarea>
 
-        <button type="submit" class="btn btn-primary btn-arrow" style="align-self:center;">Send message</button>
+        <button type="submit" class="btn btn-primary btn-arrow">Send message</button>
       </form>
     </div>
   </section>
