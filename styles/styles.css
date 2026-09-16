@@ -270,6 +270,36 @@ section { padding: 6.5rem 0; }
   font-size: 0.68rem; font-weight: 700; color: var(--taupe);
 }
 
+/*--- CASE PROOF PROJECTS ---*/
+.case-proof {
+  margin: 0 0 1.7rem;
+  background: #fff;
+  border: 1px solid rgba(140,133,120,0.35);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.case-proof img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid rgba(140,133,120,0.35);
+}
+.case-proof-caption {
+  padding: 0.9rem 1.1rem;
+  font-size: 0.85rem;
+  color: var(--taupe);
+  line-height: 1.5;
+}
+.case-proof-caption code {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: var(--green);
+  background: var(--paper-dim);
+  padding: 0.1rem 0.35rem;
+  border-radius: 2px;
+  font-size: 0.82rem;
+}
+.case-proof-caption strong { color: var(--green); }
+
 /* ---------- Contact CTA band ---------- */
 .cta-band {
   background: var(--green);
