@@ -26,7 +26,8 @@
         <li><a href="blog.html" class="nav-link">Blog</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
-      <a href="https://drive.google.com/file/d/1Qw_V2R3qRs5JSCtpJv_tCIyQ2bVhx2Df/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Resume</a>
+      <a href="https://drive.google.com/file/d/10PEnXx7qyDLWZ7_0M2ocUHlH25EIFLmy/view?usp=sharing" target="_blank"
+          rel="noopener" class="btn btn-ghost btn-sm">Resume</a>
     </div>
   </div>
 </nav>
@@ -69,6 +70,35 @@
   </div>
 </section>
 
+
+<!-- METERING & BILLING ENGINE -->
+<section class="project-case" id="metering-billing">
+  <div class="wrap">
+    <div class="case-grid">
+      <div class="case-visual">
+        <img src="assets/command-line.png" alt="Diagrama de flujo de medición de uso y suscripciones vía Stripe">
+      </div>
+      <div>
+        <span class="case-index">02</span>
+        <div class="case-title"><h3>Usage Metering & Billing Engine</h3></div>
+        <p class="case-summary">Multi-Tenant Metering & Subscription System</p>
+        <p class="case-desc">A backend system that tracks each tenant's usage against their plan limits in real time, and upgrades billing through Stripe once that limit is reached — similar to how a parking meter tracks time before charging overage.</p>
+        <ul class="case-list">
+          <li>Built a quota engine that checks usage against plan limits before allowing a request, returning 429/402 responses with a clear reason when a tenant is over their limit.</li>
+          <li>Implemented idempotent usage logging with a unique idempotency key, preventing duplicate billing events on retries.</li>
+          <li>Integrated Stripe Checkout and webhooks with signature verification and event deduplication to safely upgrade subscriptions.</li>
+        </ul>
+        <div class="stack-chips">
+          <span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>Stripe</span><span>Docker</span>
+        </div>
+        <div class="case-ctas">
+          <a href="https://github.com/vicenhr/flyrank-capstone-metering-billing" target="_blank" rel="noopener" class="btn btn-primary btn-arrow">View repository</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOROHUB -->
 <section class="project-case" id="forohub">
   <div class="wrap">
@@ -77,7 +107,7 @@
         <img src="assets/hexagon-network.png" alt="Diagrama de nodos conectados representando la estructura de ForoHub">
       </div>
       <div>
-        <span class="case-index">02</span>
+        <span class="case-index">03</span>
         <div class="case-title"><h3>ForoHub</h3></div>
         <p class="case-summary">Discussion Forum API</p>
         <p class="case-desc">A secure REST API for managing forum topics, with authentication and database persistence handled end to end.</p>
@@ -89,43 +119,17 @@
         <div class="stack-chips">
           <span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>JPA</span><span>MySQL</span>
         </div>
+
+        <!-- NUEVO: evidencia real de funcionamiento -->
+        <div class="case-proof">
+          <img src="assets/forohub-auth-proof.png" alt="Captura de Insomnia mostrando el endpoint de login de ForoHub devolviendo un token JWT válido con status 200 OK">
+          <p class="case-proof-caption">Endpoint de autenticación probado en vivo: la petición <code>POST /login</code> responde <strong>200 OK</strong> con un token JWT válido.</p>
+        </div>
+
         <div class="case-ctas">
           <a href="https://github.com/vicenhr/forohub" target="_blank" rel="noopener" class="btn btn-primary btn-arrow">View repository</a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- LITERALURA -->
-<section class="project-case" id="literalura">
-  <div class="wrap">
-    <div class="case-grid">
-      <div class="case-visual">
-        <img src="assets/command-line.png" alt="Icono de puerta y flecha representando el acceso a datos externos en LiterAlura">
-      </div>
-      <div>
-        <span class="case-index">03</span>
-        <div class="case-title"><h3>LiterAlura</h3></div>
-        <p class="case-summary">Interactive Literary Manager</p>
-        <p class="case-desc">A console application that manages a literary database by consuming the Gutendex API — turning an open book catalog into a queryable local dataset.</p>
-        <ul class="case-list">
-          <li>Built a persistence layer with Spring Data JPA, preventing duplicate book and author records.</li>
-          <li>Used Java Streams and JPQL for advanced filtering — author longevity, real-time download stats.</li>
-          <li>Integrated an external REST API with Jackson for JSON-to-relational-database mapping.</li>
-        </ul>
-        <div class="stack-chips">
-          <span>Java</span><span>Spring Boot</span><span>PostgreSQL</span><span>REST API</span>
-        </div>
-        <div class="case-ctas">
-          <a href="https://github.com/vicenhr/literalura" target="_blank" rel="noopener" class="btn btn-primary btn-arrow">View repository</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="extra-note">
-      <h4>Also built: Currency Converter</h4>
-      <p>A console/desktop app for real-time currency conversion, integrating an external REST API and handling JSON serialization with Gson and Jackson. <a href="https://github.com/vicenhr/currency-converter" target="_blank" rel="noopener">View repository →</a></p>
     </div>
   </div>
 </section>
